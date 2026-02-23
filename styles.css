@@ -4,7 +4,7 @@
   --muted:#bfbfbf;
   --card-bg:rgba(255,255,255,0.04);
   /* Background image (edit in code only) */
-  --bg-image: url("assets/images/triangle.png");
+  --bg-image: url("assets/images/triangles.png");
   --bg-image-opacity: 0.12; /* 0.0 - 1.0 */
   --bg-image-blur: 4px; /* blur radius */
 }
