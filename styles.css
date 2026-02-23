@@ -3,6 +3,10 @@
   --fg:#fff;
   --muted:#bfbfbf;
   --card-bg:rgba(255,255,255,0.04);
+  /* Background image (edit in code only) */
+  --bg-image: url("assets/images/triangle.png");
+  --bg-image-opacity: 0.12; /* 0.0 - 1.0 */
+  --bg-image-blur: 4px; /* blur radius */
 }
 *{box-sizing:border-box}
 html,body{height:100%;}
@@ -55,6 +59,22 @@ body{
 /* Card logo (centered above title) */
 .card-logo{display:block; text-align:center; margin-bottom:12px}
 .card-logo img{width:56px; height:56px; object-fit:contain; display:inline-block}
+
+/* Static background layer (editable via CSS variables) */
+html::before{
+  content: "";
+  position:fixed;
+  inset:0;
+  background-image: var(--bg-image);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  opacity: var(--bg-image-opacity);
+  filter: blur(var(--bg-image-blur));
+  transform: translateZ(0);
+  z-index:-1;
+  pointer-events:none;
+}
 
 .site-footer{width:100%; text-align:center; padding:18px 8px; color:var(--muted); font-size:0.9rem}
 
