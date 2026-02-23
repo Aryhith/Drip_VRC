@@ -1,0 +1,47 @@
+:root{
+  --bg:#000;
+  --fg:#fff;
+  --muted:#bfbfbf;
+  --card-bg:rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: radial-gradient( circle at 10% 10%, rgba(255,255,255,0.02) 0%, transparent 10% ),
+              radial-gradient( circle at 90% 90%, rgba(255,255,255,0.02) 0%, transparent 10% ),
+              var(--bg);
+  color:var(--fg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+}
+.site-header{width:100%; padding:20px 28px; display:flex; align-items:center}
+.logo{display:inline-flex; align-items:center; gap:10px; color:var(--fg); text-decoration:none}
+
+.hero{display:flex; align-items:center; justify-content:center; flex:1; width:100%; padding:48px 20px}
+.card{max-width:720px; width:100%; background:var(--card-bg); border:1px solid rgba(255,255,255,0.06); padding:40px; border-radius:12px; text-align:center}
+.title{margin:0 0 6px 0; font-size:2.2rem; letter-spacing:0.6px}
+.subtitle{margin:0 0 22px 0; color:var(--muted)}
+
+.links{display:flex; gap:18px; justify-content:center; margin:22px 0}
+.icon-btn{display:inline-flex; gap:10px; align-items:center; padding:10px 16px; color:var(--fg); text-decoration:none; border-radius:10px; border:1px solid transparent; transition:all .18s ease}
+.icon-btn svg{display:block}
+.icon-btn span{font-weight:600}
+.icon-btn:hover{transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,0.5); background:rgba(255,255,255,0.02); border-color:rgba(255,255,255,0.08)}
+
+.hint{display:block; margin-top:8px; color:var(--muted)}
+.hint a{color:var(--fg); text-decoration:underline}
+
+.site-footer{width:100%; text-align:center; padding:18px 8px; color:var(--muted); font-size:0.9rem}
+
+@media (max-width:520px){
+  .card{padding:28px}
+  .title{font-size:1.6rem}
+  .links{flex-direction:column}
+  .icon-btn{width:100%; justify-content:center}
+}
