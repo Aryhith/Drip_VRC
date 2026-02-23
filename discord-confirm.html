@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Join Discord — Drip VRC</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header"></header>
+
+    <main class="hero">
+      <div class="card">
+        <div class="card-logo">
+          <img src="assets/images/driplogo.png" alt="Drip VRC logo" width="100" height="100">
+        </div>
+        <h1 class="title">Join Our Discord</h1>
+
+        <div class="instructions">
+          <p>Before you join our groups and community, know that:</p>
+          <ul>
+            <li>When you join the Discord server, you agree to our community guidelines via the rules page.</li>
+            <li>Request a ticket via the ticket system in server.</li>
+            <li>Wait for a mod to vet you in.</li>
+            <li>Do not spam tickets or we will not help you.</li>
+          </ul>
+          <p>Click the button below to confirm and be redirected to our Discord server. Thanks!</p>
+        </div>
+
+        <div class="links">
+          <button class="icon-btn invert" id="confirmBtn" aria-label="Confirm and join Discord">
+            <img src="assets/images/discordlogo.svg" alt="Discord logo" width="24" height="24">
+            <span>Confirm & Join</span>
+          </button>
+        </div>
+
+        <p class="back-link"><a href="index.html">← Back to home</a></p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Drip VRC</p>
+    </footer>
+
+    <script>
+      // Set year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Confirmation button redirects to Discord
+      document.getElementById('confirmBtn').addEventListener('click', function() {
+        window.location.href = 'https://discord.gg/9RZrVN5c5j';
+      });
+    </script>
+  </body>
+</html>
