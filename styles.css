@@ -52,6 +52,10 @@ body{
 .hint{display:block; margin-top:8px; color:var(--muted)}
 .hint a{color:var(--fg); text-decoration:underline}
 
+/* Card logo (centered above title) */
+.card-logo{display:block; text-align:center; margin-bottom:12px}
+.card-logo img{width:56px; height:56px; object-fit:contain; display:inline-block}
+
 .site-footer{width:100%; text-align:center; padding:18px 8px; color:var(--muted); font-size:0.9rem}
 
 @media (max-width:520px){
