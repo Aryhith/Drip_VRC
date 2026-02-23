@@ -34,10 +34,20 @@ body{
 .icon-btn span{font-weight:600}
 .icon-btn:hover{transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,0.5); background:rgba(255,255,255,0.02); border-color:rgba(255,255,255,0.08)}
 
-/* Inverted buttons: white background with dark content for better contrast on black page */
-.icon-btn.invert{background:var(--fg); color:var(--bg); border-color:rgba(0,0,0,0.12)}
-.icon-btn.invert img{filter:invert(1) hue-rotate(0deg) saturate(0.1)}
-.icon-btn.invert:hover{transform:translateY(-4px); box-shadow:0 10px 24px rgba(0,0,0,0.35); background:var(--fg); color:var(--bg); border-color:rgba(0,0,0,0.16)}
+/* Muted translucent buttons: subtle light-gray background for contrast on black */
+.icon-btn.invert{
+  background: rgba(255,255,255,0.10);
+  color: var(--fg);
+  border-color: rgba(255,255,255,0.08);
+}
+.icon-btn.invert img{filter:none}
+.icon-btn.invert:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.45);
+  background: rgba(255,255,255,0.14);
+  color: var(--fg);
+  border-color: rgba(255,255,255,0.12);
+}
 
 .hint{display:block; margin-top:8px; color:var(--muted)}
 .hint a{color:var(--fg); text-decoration:underline}
